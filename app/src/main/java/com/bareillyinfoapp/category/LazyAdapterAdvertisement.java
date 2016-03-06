@@ -94,9 +94,14 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 
 			});
 
+
 			if(p.mOfferExist.equals("0")) {
+
 				offerButton.setVisibility(View.INVISIBLE);
+			} else {
+				offerButton.setVisibility(View.VISIBLE);
 			}
+
 	        //for alternate color on list view
 	        if(position % 2 == 0)
 	        {
@@ -135,6 +140,15 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 	class processGetAdvertise extends AsyncTask<String, Integer, Offer> {
 		ProgressDialog nDialog;
 
+		protected void onPreExecute() {
+
+			nDialog = new ProgressDialog(activity);
+			nDialog.setMessage("receiving data...");
+			nDialog.setIndeterminate(false);
+			nDialog.setCancelable(true);
+			nDialog.show();
+		}
+
 		protected Offer doInBackground(String... arg0) {
 			// TODO Auto-generated method stub
 			DataSource dS = new DataSource();
@@ -147,49 +161,40 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 				// TODO Auto-generated catch block
 				//e.printStackTrace();
 			}
+			nDialog.dismiss();
+
 			return ObjectItemData;
 		}
-		protected void onPreExecute() {
-
-			nDialog = new ProgressDialog(activity);
-			nDialog.setMessage("receiving data...");
-			nDialog.setIndeterminate(false);
-			nDialog.setCancelable(true);
-			nDialog.show();
-		}
-
 
 		protected void onPostExecute(Offer result) {
 
 			try {
-				Offer offer = (Offer) result;
-				if (offer != null){
-
-
+				if (result != null) {
+					Log.i("poop", "onPostExecute: i m here");
 					myDialog = new Dialog(activity);
 					myDialog.setContentView(R.layout.offer_form);
 					myDialog.setTitle("Offer");
 
 					//Button save = (Button) myDialog.findViewById(R.id.imageButton1);
-					nDialog.show();
+
+
+					TextView offer_1 = (TextView) myDialog.findViewById(R.id.textView1);
+					TextView offer_2 = (TextView) myDialog.findViewById(R.id.textView2);
+					TextView offer_3 = (TextView) myDialog.findViewById(R.id.textView3);
+
+					offer_1.setText(result.moffer_1);
+					offer_2.setText(result.moffer_2);
+					offer_3.setText(result.moffer_3);
+
+					myDialog.show();
 				}
-
-				TextView offer_1 = (TextView) myDialog.findViewById(R.id.textView1);
-				TextView offer_2 = (TextView) myDialog.findViewById(R.id.textView2);
-				TextView offer_3 = (TextView) myDialog.findViewById(R.id.textView3);
-
-				offer_1.setText(offer.moffer_1);
-				offer_2.setText(offer.moffer_2);
-				offer_3.setText(offer.moffer_3);
-
-
-
-			}catch(Exception ex)
-			{
+			}catch(Exception ex) {
 
 			}
-
 		}
+
+
+
 
 
 	}

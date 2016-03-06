@@ -1,5 +1,7 @@
 package com.bareillyinfoapp.category;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,7 +21,7 @@ public class DataSource
 		private static String url_get_all_category = "/index.php?/json/get_all_category/";
 		private static String url_get_all_advertisement = "/index.php?/json/get_all_advertisement/";
 	//	private static String url_add_user = "/index.php?/Json/adduser/";
-	private static String url_get_all_offer_by_advertisement_id = "/index.php?/json/get_all_offer_by_advertisement_id/";
+		private static String url_get_all_offer_by_advertisement_id = "/index.php?/json/get_all_offer_by_advertisement_id/";
 
 		//for category
 		private static final String TAG_CATEGORY = "category";
@@ -40,7 +42,7 @@ public class DataSource
 
 	//for offer
 
-			private static final String TAG_OFFER = "offer_exist";
+			private static final String TAG_OFFER = "offer";
 			private static final String TAG_OFFER_1 = "offer_1";
 			private static final String TAG_OFFER_2 = "offer_2";
 			private static final String TAG_OFFER_3 = "offer_3";
@@ -184,7 +186,6 @@ public class DataSource
 			contacts = json.getJSONArray(TAG_OFFER);
 
 			for (int i = 0; i < contacts.length(); i++)
-
 			{
 				JSONObject c = contacts.getJSONObject(i);
 
@@ -192,19 +193,11 @@ public class DataSource
 				String offer_2 = c.getString(TAG_OFFER_2);
 				String offer_3 = c.getString(TAG_OFFER_3);
 
-
-				Offer u = new Offer();
-				u.moffer_1 = offer_1;
-				u.moffer_2 = offer_2;
-				u.moffer_3 = offer_3;
-
-
-				return Offer(u);
-
+				returnArray.moffer_1 = offer_1;
+				returnArray.moffer_2 = offer_2;
+				returnArray.moffer_3 = offer_3;
 			}
-		} catch (JSONException e)
-
-		{
+		} catch (JSONException e) {
 			e.printStackTrace();
 		}
 
