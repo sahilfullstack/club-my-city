@@ -36,6 +36,7 @@ public class DataSource
 		private static final String TAG_EMAIL = "email";
 		private static final String TAG_ADDRESS = "address";
 		private static final String TAG_ADVERTISEMENT_ID = "advertisement_id";
+		private static final String TAG_OFFER_EXIST = "offer_exist";
 
 	//for offer
 
@@ -145,7 +146,9 @@ public class DataSource
 					String address = c.getString(TAG_ADDRESS);
 					String ad_photo = c.getString(TAG_PHOTO_NAME);
 					String advertisement_id = c.getString(TAG_ADVERTISEMENT_ID);
-					
+					String offer_exist = c.getString(TAG_OFFER_EXIST);
+
+
 					Advertisement u = new Advertisement();
 					u.madvertiseName = advertisement_name;
 					u.mDescription = decription;
@@ -154,6 +157,8 @@ public class DataSource
 					u.mAddress = address;
 					u.mphoto = ad_photo;
 					u.mAdvertisementId = advertisement_id;
+					u.mOfferExist = offer_exist;
+
 			returnArray.add(u);
 		}
 		} 

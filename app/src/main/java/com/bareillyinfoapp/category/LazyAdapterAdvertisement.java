@@ -93,7 +93,10 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 				}
 
 			});
-	        
+
+			if(p.mOfferExist.equals("0")) {
+				offerButton.setVisibility(View.INVISIBLE);
+			}
 	        //for alternate color on list view
 	        if(position % 2 == 0)
 	        {
@@ -106,7 +109,7 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 	               // vi.setBackgroundResource(R.drawable.list_selector_alternate);		                
 	        }
         
-	        
+
 	        
 	     //   String bhk_options_str = p.mStakeholderId.replace("0,","").replace(", 0", "") + " BHK";
 	        advertisement_name.setText(p.madvertiseName);

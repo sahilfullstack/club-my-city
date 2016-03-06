@@ -9,6 +9,6 @@ public class Advertisement {
 	public String mphoto;
 	public String mMobileNo;
 	public String mAdvertisementId;
-	
+	public String mOfferExist;
 
 }
