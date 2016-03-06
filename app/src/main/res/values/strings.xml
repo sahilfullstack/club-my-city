@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bareilly Info</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="show_menu">1</string>
+    <string name="title_activity_add_advertisement">AddAdvertisement</string>
+    <string name="menu_aboutus_detail"> A smart city uses digital technologies or information and communication technologies (ICT) 
+          to enhance quality and performance of urban services, to reduce costs and resource consumption, 
+          and to engage more effectively and actively with its citizens.. \n
+          So, we made this application for Bareilly..\n
+          After few month Bareilly will be the Smart City..So our motive is that citzen of our city be also smart..\n
+          So, we made an appliction for our Bareilly..\n
+          In this application u will get all the detail information of Bareilly City..\n\n
+                
+            Powered By:Ashutosh Gangwar(Technical Head) And Ishan Bharadwaj(Marketing Head) \n\n
+             
+            Contact Us:smartcityinformation@gmail.com</string>
+    <string name="menu_contact_us">For advertisement contact us @.\n\nPowered By:Ashutosh Gangwar(Technical Head) And Ishan Bharadwaj(Marketing Head)  \n\nSales : +919548858606; +918392857709\n\nEmail Id : smartcityinformation@gmail.com</string>
+
+</resources>
