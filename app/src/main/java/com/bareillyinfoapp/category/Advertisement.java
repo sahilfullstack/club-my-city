@@ -8,6 +8,7 @@ public class Advertisement {
 	public String mAddress;
 	public String mphoto;
 	public String mMobileNo;
+	public String mAdvertisementId;
 	
 
 }

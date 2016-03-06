@@ -16,6 +16,10 @@
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/ic_launcher.png"
     },
     {
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/offericon.png",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/offericon.png"
+    },
+    {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/phone.png",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/phone.png"
     }

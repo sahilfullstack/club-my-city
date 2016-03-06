@@ -19,6 +19,7 @@ public class DataSource
 		private static String url_get_all_category = "/index.php?/json/get_all_category/";
 		private static String url_get_all_advertisement = "/index.php?/json/get_all_advertisement/";
 	//	private static String url_add_user = "/index.php?/Json/adduser/";
+	private static String url_get_all_offer_by_advertisement_id = "/index.php?/json/get_all_offer_by_advertisement_id/";
 
 		//for category
 		private static final String TAG_CATEGORY = "category";
@@ -34,8 +35,15 @@ public class DataSource
 		private static final String TAG_MOBILE_NO = "mobile_no";
 		private static final String TAG_EMAIL = "email";
 		private static final String TAG_ADDRESS = "address";
-		
-		JSONArray contacts = null;
+		private static final String TAG_ADVERTISEMENT_ID = "advertisement_id";
+
+	//for offer
+
+			private static final String TAG_OFFER = "offer_exist";
+			private static final String TAG_OFFER_1 = "offer_1";
+			private static final String TAG_OFFER_2 = "offer_2";
+			private static final String TAG_OFFER_3 = "offer_3";
+			JSONArray contacts = null;
 
 		/** Returns the singleton instance of this class. */
 		public static DataSource getInstance() 
@@ -135,7 +143,8 @@ public class DataSource
 					String mobile_no = c.getString(TAG_MOBILE_NO);
 					String email = c.getString(TAG_EMAIL);
 					String address = c.getString(TAG_ADDRESS);
-					String ad_photo = c.getString(TAG_PHOTO_NAME);					
+					String ad_photo = c.getString(TAG_PHOTO_NAME);
+					String advertisement_id = c.getString(TAG_ADVERTISEMENT_ID);
 					
 					Advertisement u = new Advertisement();
 					u.madvertiseName = advertisement_name;
@@ -143,7 +152,8 @@ public class DataSource
 					u.mMobileNo = mobile_no;
 					u.mEmail = email;
 					u.mAddress = address;
-					u.mphoto = ad_photo;	                
+					u.mphoto = ad_photo;
+					u.mAdvertisementId = advertisement_id;
 			returnArray.add(u);
 		}
 		} 
@@ -153,4 +163,57 @@ public class DataSource
 			}
 	     	return returnArray;
 		}
+
+
+
+	public Offer getoffer(String advertisement_id)
+	{
+		Offer returnArray = new Offer();
+
+		JSONParser jParser = new JSONParser();
+
+		try
+		{
+			JSONObject json = jParser.getJSONFromUrl(url_get_all_offer_by_advertisement_id + advertisement_id);
+
+			contacts = json.getJSONArray(TAG_OFFER);
+
+			for (int i = 0; i < contacts.length(); i++)
+
+			{
+				JSONObject c = contacts.getJSONObject(i);
+
+				String offer_1 = c.getString(TAG_OFFER_1);
+				String offer_2 = c.getString(TAG_OFFER_2);
+				String offer_3 = c.getString(TAG_OFFER_3);
+
+
+				Offer u = new Offer();
+				u.moffer_1 = offer_1;
+				u.moffer_2 = offer_2;
+				u.moffer_3 = offer_3;
+
+
+				return Offer(u);
+
+			}
+		} catch (JSONException e)
+
+		{
+			e.printStackTrace();
+		}
+
+		return returnArray;
 	}
+
+
+
+	private Offer Offer(Offer u) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+}

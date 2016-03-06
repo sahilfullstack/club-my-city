@@ -4,6 +4,10 @@
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/layout/advertise_list.xml"
     },
     {
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/layout/offer_form.xml",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/layout/offer_form.xml"
+    },
+    {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/layout/list_view_row_item.xml",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/layout/list_view_row_item.xml"
     },

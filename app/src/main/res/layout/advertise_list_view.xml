@@ -73,4 +73,13 @@
         android:textColor="#FD0303"
         android:textSize="12dp" />
 
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="55dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ad_name"
+        android:src="@drawable/offericon"
+        />
+
 </RelativeLayout>
