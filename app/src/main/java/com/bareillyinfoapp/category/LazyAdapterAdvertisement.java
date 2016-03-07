@@ -77,10 +77,17 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 	        TextView address = (TextView)vi.findViewById(R.id.address);
 	        ImageView thumb_image=(ImageView)vi.findViewById(R.id.imageView1);
 
+			thumb_image.setOnClickListener(new View.OnClickListener() {
+
+				public void onClick(View view) {
+					Intent myIntent = new Intent(activity, GalleryDemoActivity.class);
+//					myIntent.putExtra("key", value); //Optional parameters
+					activity.startActivity(myIntent);
+				}
+
+			});
 
 			ImageButton offerButton = (ImageButton)vi.findViewById(R.id.imageButton1);
-
-
 
 			Advertisement p = data.get(position);
 
@@ -89,10 +96,12 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 
 				public void onClick(View view) {
 					getOffer((String) view.getTag());
-
 				}
 
 			});
+
+
+
 
 
 			if(p.mOfferExist.equals("0")) {

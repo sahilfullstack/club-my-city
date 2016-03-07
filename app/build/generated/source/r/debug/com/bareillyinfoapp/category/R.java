@@ -28,33 +28,59 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int blyinfoicon=0x7f020000;
-        public static final int i=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
-        public static final int list_selector=0x7f020003;
-        public static final int offericon=0x7f020004;
-        public static final int phone=0x7f020005;
+        public static final int arrow_left_disabled=0x7f020000;
+        public static final int arrow_left_enabled=0x7f020001;
+        public static final int arrow_right_disabled=0x7f020002;
+        public static final int arrow_right_enabled=0x7f020003;
+        public static final int blyinfoicon=0x7f020004;
+        public static final int i=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int image_border=0x7f020007;
+        public static final int list_selector=0x7f020008;
+        public static final int natureimage1=0x7f020009;
+        public static final int natureimage10=0x7f02000a;
+        public static final int natureimage11=0x7f02000b;
+        public static final int natureimage12=0x7f02000c;
+        public static final int natureimage13=0x7f02000d;
+        public static final int natureimage14=0x7f02000e;
+        public static final int natureimage15=0x7f02000f;
+        public static final int natureimage2=0x7f020010;
+        public static final int natureimage3=0x7f020011;
+        public static final int natureimage4=0x7f020012;
+        public static final int natureimage5=0x7f020013;
+        public static final int natureimage6=0x7f020014;
+        public static final int natureimage7=0x7f020015;
+        public static final int natureimage8=0x7f020016;
+        public static final int natureimage9=0x7f020017;
+        public static final int offericon=0x7f020018;
+        public static final int phone=0x7f020019;
+        public static final int selected_image_border=0x7f02001a;
     }
     public static final class id {
-        public static final int about_us=0x7f090010;
-        public static final int action_settings=0x7f09000f;
+        public static final int about_us=0x7f090015;
+        public static final int action_settings=0x7f090014;
         public static final int ad_dec=0x7f090003;
         public static final int ad_name=0x7f090002;
         public static final int address=0x7f090004;
         public static final int category_description=0x7f09000b;
         public static final int category_image=0x7f090009;
         public static final int category_name=0x7f09000a;
-        public static final int contact_us=0x7f090012;
+        public static final int contact_us=0x7f090017;
         public static final int email=0x7f090007;
+        public static final int gallery=0x7f09000f;
+        public static final int gallery_relative_layout=0x7f09000d;
         public static final int imageButton1=0x7f090008;
         public static final int imageView1=0x7f090001;
         public static final int imageView2=0x7f090005;
+        public static final int left_arrow_imageview=0x7f09000e;
         public static final int listView1=0x7f090000;
         public static final int mobile=0x7f090006;
-        public static final int new_advertisement=0x7f090011;
-        public static final int textView1=0x7f09000c;
-        public static final int textView2=0x7f09000d;
-        public static final int textView3=0x7f09000e;
+        public static final int new_advertisement=0x7f090016;
+        public static final int right_arrow_imageview=0x7f090010;
+        public static final int selected_imageview=0x7f09000c;
+        public static final int textView1=0x7f090011;
+        public static final int textView2=0x7f090012;
+        public static final int textView3=0x7f090013;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -62,7 +88,8 @@ public final class R {
         public static final int advertise_list_view=0x7f030002;
         public static final int category_list=0x7f030003;
         public static final int list_view_row_item=0x7f030004;
-        public static final int offer_form=0x7f030005;
+        public static final int main=0x7f030005;
+        public static final int offer_form=0x7f030006;
     }
     public static final class menu {
         public static final int add_advertisement=0x7f080000;
