@@ -8,6 +8,9 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.v4.view.MotionEventCompat;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -31,7 +34,7 @@ public class GalleryDemoActivity extends Activity {
     private List<Drawable> drawables;
 
     private GalleryImageAdapter galImageAdapter;
-
+    float startXValue = 1;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,53 @@ public class GalleryDemoActivity extends Activity {
         leftArrowImageView = (ImageView) findViewById(R.id.left_arrow_imageview);
         rightArrowImageView = (ImageView) findViewById(R.id.right_arrow_imageview);
         gallery = (Gallery) findViewById(R.id.gallery);
+
+        selectedImageView.setOnTouchListener(new View.OnTouchListener() {
+            float nPicturePositionM = 0;
+            public boolean onTouch(final View view, final MotionEvent event) {
+
+                float endXValue = 0;
+                float x1 = event.getAxisValue(MotionEvent.AXIS_X);
+                int action = MotionEventCompat.getActionMasked(event);
+                switch (action) {
+                    case (MotionEvent.ACTION_DOWN):
+                        startXValue = event.getAxisValue(MotionEvent.AXIS_X);
+
+                        return true;
+
+                    case (MotionEvent.ACTION_UP):
+                        endXValue = event.getAxisValue(MotionEvent.AXIS_X);
+                        if (endXValue > startXValue) {
+                            if (endXValue - startXValue > 100) {
+                                System.out.println("Left-Right");
+                                if (selectedImagePosition > 0) {
+                                    --selectedImagePosition;
+
+                                }
+
+                                gallery.setSelection(selectedImagePosition, false);
+
+                            }
+                        }else {
+                            if (startXValue -endXValue> 100) {
+                                System.out.println("Right-Left");
+
+                                if (selectedImagePosition < drawables.size() - 1) {
+                                    ++selectedImagePosition;
+
+                                }
+
+                                gallery.setSelection(selectedImagePosition, false);
+                            }
+                        }
+                        return true;
+
+
+                    default:
+                        return true;
+                }
+            }
+        });
 
         leftArrowImageView.setOnClickListener(new OnClickListener() {
 
