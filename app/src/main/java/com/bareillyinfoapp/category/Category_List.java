@@ -1,20 +1,19 @@
 package com.bareillyinfoapp.category;
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
 
-import com.bareillyinfoapp.category.R;
+
+import java.util.ArrayList;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,19 +23,22 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.content.Intent;
 import android.graphics.Color;
 import android.widget.Button;
-import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class Category_List extends Activity {
 	private Activity activity;
-	AlertDialog alertDialogStores;
 	ListView listViewItems;
 	ArrayList<Category> categoryList;
+	/**
+	 * ATTENTION: This was auto-generated to implement the App Indexing API.
+	 * See https://g.co/AppIndexing/AndroidStudio for more information.
+	 */
+	private GoogleApiClient client;
 
 	// for menu
 	@Override
@@ -49,77 +51,162 @@ public class Category_List extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-		case R.id.about_us: {
-			AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-			String str = getString(R.string.menu_aboutus_detail);
-			final ScrollView s_view = new ScrollView(getApplicationContext());
-			final TextView t_view = new TextView(getApplicationContext());
-			t_view.setBackgroundColor(Color.BLACK);
-			t_view.setTextColor(Color.GREEN);
-			t_view.setPadding(10, 10, 10, 10);
-			t_view.setText(str);
-			t_view.setTextSize(14);
-			s_view.addView(t_view);
-			alertDialog.setTitle("Smart City Information");
-			alertDialog.setView(s_view);
-			alertDialog.show();
+			case R.id.about_us: {
+				AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+				String str = getString(R.string.menu_aboutus_detail);
+				final ScrollView s_view = new ScrollView(getApplicationContext());
+				final TextView t_view = new TextView(getApplicationContext());
+				t_view.setBackgroundColor(Color.BLACK);
+				t_view.setTextColor(Color.GREEN);
+				t_view.setPadding(10, 10, 10, 10);
+				t_view.setText(str);
+				t_view.setTextSize(14);
+				s_view.addView(t_view);
+				alertDialog.setTitle("Smart City Information");
+				alertDialog.setView(s_view);
+				alertDialog.show();
 
-		}
-		return true;
-		case R.id.contact_us: {
-			AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-			String str = getString(R.string.menu_contact_us);
-			final ScrollView s_view = new ScrollView(getApplicationContext());
-			final TextView t_view = new TextView(getApplicationContext());
-			t_view.setBackgroundColor(Color.BLACK);
-			t_view.setTextColor(Color.GREEN);
-			t_view.setPadding(10, 10, 10, 10);
-			t_view.setText(str);
-			t_view.setTextSize(14);
-			s_view.addView(t_view);
-			alertDialog.setTitle("Smart City Information");
-			alertDialog.setView(s_view);
-			alertDialog.show();
-		}
-		return true;
-		default:
-			return super.onOptionsItemSelected(item);
+			}
+			return true;
+			case R.id.contact_us: {
+				AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+				String str = getString(R.string.menu_contact_us);
+				final ScrollView s_view = new ScrollView(getApplicationContext());
+				final TextView t_view = new TextView(getApplicationContext());
+				t_view.setBackgroundColor(Color.BLACK);
+				t_view.setTextColor(Color.GREEN);
+				t_view.setPadding(10, 10, 10, 10);
+				t_view.setText(str);
+				t_view.setTextSize(14);
+				s_view.addView(t_view);
+				alertDialog.setTitle("Smart City Information");
+				alertDialog.setView(s_view);
+				alertDialog.show();
+			}
+			return true;
+			default:
+				return super.onOptionsItemSelected(item);
 		}
 	}
 
-	/** Called when the activity is first created. */
+	/**
+	 * Called when the activity is first created.
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.category_list);
 		activity = this;
-		getCategory();	
+
+
+
+		if (isNetworkAvailable()) {
+			// do something
+			// Set the layout
+			setContentView(R.layout.category_list);
+			getCategory();
+		} else {
+
+			getNotNetworkView();
+		}
+//		getCategory();
+		// ATTENTION: This was auto-generated to implement the App Indexing API.
+		// See https://g.co/AppIndexing/AndroidStudio for more information.
+		client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+	}
+
+	private boolean isNetworkAvailable() {
+		ConnectivityManager connectivityManager
+				= (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+		return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+	}
+
+	@Override
+	public void onStart() {
+		super.onStart();
+
+		// ATTENTION: This was auto-generated to implement the App Indexing API.
+		// See https://g.co/AppIndexing/AndroidStudio for more information.
+		client.connect();
+		Action viewAction = Action.newAction(
+				Action.TYPE_VIEW, // TODO: choose an action type.
+				"Category_List Page", // TODO: Define a title for the content shown.
+				// TODO: If you have web page content that matches this app activity's content,
+				// make sure this auto-generated web page URL is correct.
+				// Otherwise, set the URL to null.
+				Uri.parse("http://host/path"),
+				// TODO: Make sure this auto-generated app deep link URI is correct.
+				Uri.parse("android-app://com.bareillyinfoapp.category/http/host/path")
+		);
+		AppIndex.AppIndexApi.start(client, viewAction);
+	}
+
+	@Override
+	public void onStop() {
+		super.onStop();
+
+		// ATTENTION: This was auto-generated to implement the App Indexing API.
+		// See https://g.co/AppIndexing/AndroidStudio for more information.
+		Action viewAction = Action.newAction(
+				Action.TYPE_VIEW, // TODO: choose an action type.
+				"Category_List Page", // TODO: Define a title for the content shown.
+				// TODO: If you have web page content that matches this app activity's content,
+				// make sure this auto-generated web page URL is correct.
+				// Otherwise, set the URL to null.
+				Uri.parse("http://host/path"),
+				// TODO: Make sure this auto-generated app deep link URI is correct.
+				Uri.parse("android-app://com.bareillyinfoapp.category/http/host/path")
+		);
+		AppIndex.AppIndexApi.end(client, viewAction);
+		client.disconnect();
+	}
+
+	public void getNotNetworkView() {
+		// Set the layout
+		setContentView(R.layout.no_network_page);
+
+		RelativeLayout noNetworkView = (RelativeLayout) findViewById(R.id.rlNoNework);
+		Button retryNetworkButton = (Button) noNetworkView.findViewById(R.id.retryNetConnectionButton);
+		retryNetworkButton.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				if (isNetworkAvailable()) {
+					setContentView(R.layout.category_list);
+					getCategory();
+				} else {
+					Toast.makeText(activity, "No Internet Connection",
+							Toast.LENGTH_LONG).show();
+				}
+			}
+		});
 	}
 
 	class processGetCategory extends AsyncTask<Integer, Integer, ArrayList<Category>> {
 		private ProgressDialog mDialog;
-        protected void onPreExecute() 
-        {
-        	mDialog = new ProgressDialog(Category_List.this);
+
+		protected void onPreExecute() {
+			mDialog = new ProgressDialog(Category_List.this);
 			mDialog.setMessage("receiving data..");
 			mDialog.setIndeterminate(false);
 			mDialog.setCancelable(true);
 			mDialog.show();
-        }
+		}
 
-        
-        protected void onPostExecute(ArrayList<Category> result) {
 
-			try{
+		protected void onPostExecute(ArrayList<Category> result) {
+
+			try {
 				categoryList = (ArrayList<Category>) result;
 				LazyAdapter adapter = new LazyAdapter(activity, categoryList);
-				listViewItems = (android.widget.ListView) findViewById(R.id.listView1);
+				listViewItems = (ListView) findViewById(R.id.listView1);
 				listViewItems.setAdapter(adapter);
 
 				listViewItems.setOnItemClickListener(new OnItemClickListener() {
 					@Override
 					public void onItemClick(AdapterView<?> parent, View view,
-							int position, long id) {
+											int position, long id) {
 
 						// ListView Clicked item index
 						int itemPosition = position;
@@ -128,41 +215,34 @@ public class Category_List extends Activity {
 						Category itemValue = (Category) categoryList.get(position);
 						Intent advertisementIntent = new Intent(getApplicationContext(), Advertisement_List.class);
 
-						advertisementIntent.putExtra("category_id",	itemValue.mCategory_Id);
+						advertisementIntent.putExtra("category_id", itemValue.mCategory_Id);
 
 						startActivity(advertisementIntent);
 					}
 				});
 
-			}catch(Exception ex)
-			{
+			} catch (Exception ex) {
 
 			}
 
 			mDialog.dismiss();
 		}
-    		
-        
 
-    	@Override
-    	protected ArrayList<Category> doInBackground(Integer... arg0) 
-    	{
-    		// TODO Auto-generated method stub
-    		DataSource dS = new DataSource();
-    		ArrayList<Category> ObjectItemData = dS.getAllCategory();		    		
-    		return ObjectItemData;		    		
-    	}		    	
-    	}	
 
-    	public void getCategory()
-    	{
-    		try
-    		{
-    			new processGetCategory().execute();
-    	     }
-    		catch (Exception e)
-    		{
-    			e.printStackTrace();
-    		}
-    		}
+		@Override
+		protected ArrayList<Category> doInBackground(Integer... arg0) {
+			// TODO Auto-generated method stub
+			DataSource dS = new DataSource();
+			ArrayList<Category> ObjectItemData = dS.getAllCategory();
+			return ObjectItemData;
+		}
+	}
+
+	public void getCategory() {
+		try {
+			new processGetCategory().execute();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

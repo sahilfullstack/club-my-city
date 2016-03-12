@@ -24,6 +24,10 @@
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/layout/category_list.xml"
     },
     {
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/layout/no_network_page.xml",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/layout/no_network_page.xml"
+    },
+    {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/layout/activity_main.xml"
     }
