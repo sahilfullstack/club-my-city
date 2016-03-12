@@ -22,19 +22,18 @@ import android.widget.TextView;
 
 public class Advertisement_List extends Activity
 {
-
-		private View view;
 		private Activity activity;
-		AlertDialog alertDialogStores;
 		ListView listViewItems;
 		int category_Id =0;
 		// for menu
+
 		@Override
 		public boolean onCreateOptionsMenu(Menu menu) {
 			MenuInflater menuInflater = getMenuInflater();
 			menuInflater.inflate(R.menu.category_menu, menu);
 			return true;
 		}
+
 		@Override
 		public boolean onOptionsItemSelected(MenuItem item) {
 			switch (item.getItemId()) {
@@ -96,9 +95,7 @@ public class Advertisement_List extends Activity
 				nDialog.setIndeterminate(false);
 				nDialog.setCancelable(true);
 				nDialog.show();
-
 	        }
-
 	        
 	        protected void onPostExecute(ArrayList<Advertisement> result) 
 	        {		        	
@@ -110,10 +107,8 @@ public class Advertisement_List extends Activity
 	    		listViewItems.setAdapter(adapter);
 	        	}
 	    		nDialog.dismiss();
-	    		
 	        }
-	        
-    
+
 	    	@Override
 	    	protected ArrayList<Advertisement> doInBackground(Integer... arg0) 
 	    	{
@@ -122,17 +117,17 @@ public class Advertisement_List extends Activity
 	    		ArrayList<Advertisement> ObjectItemData = dS.getAllAdvertisement(category_Id);		    		
 	    		return ObjectItemData;		    		
 	    	}		    	
-	    	}	
+		}
 
-	    	public void getAdvertisement()
-	    	{
-	    		try
-	    		{
-	    			new processGetAdvertise().execute();
-	    	     }
-	    		catch (Exception e)
-	    		{
-	    			e.printStackTrace();
-	    		}
-	    		}	
+		public void getAdvertisement()
+		{
+			try
+			{
+				new processGetAdvertise().execute();
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
 }
