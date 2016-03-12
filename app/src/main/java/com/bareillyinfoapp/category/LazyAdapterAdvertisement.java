@@ -24,7 +24,7 @@ import javax.security.auth.login.LoginException;
 
 public class LazyAdapterAdvertisement extends BaseAdapter
 {
-	 private Activity activity;
+	    private Activity activity;
 	    private ArrayList<Advertisement> data = null;
 	    private static LayoutInflater inflater=null;
 	    public ImageLoader imageLoader;
@@ -40,28 +40,24 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 	        data=d;	        
 	        notifyDataSetChanged();        
 	        inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-	        imageLoader=new ImageLoader(activity.getApplicationContext());	       
+	        imageLoader = new ImageLoader(activity.getApplicationContext());
 	    }
-	 
 	    
 	    public int getCount() 
 	    {
 	        return data.size();
 	    }
-	 	  
-	    
+
 	    public Object getItem(int position) 
 	    {
 	        return position;
 	    }
-	 
-	    
+
 	    public long getItemId(int position) 
 	    {
 	        return position;
 	    }
-	 
-	    
+
 	    public View getView(int position, View convertView, ViewGroup parent) 
 	    {
 	        View vi=convertView;	       
@@ -84,7 +80,6 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 //					myIntent.putExtra("key", value); //Optional parameters
 					activity.startActivity(myIntent);
 				}
-
 			});
 
 			ImageButton offerButton = (ImageButton)vi.findViewById(R.id.imageButton1);
@@ -99,10 +94,6 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 				}
 
 			});
-
-
-
-
 
 			if(p.mOfferExist.equals("0")) {
 

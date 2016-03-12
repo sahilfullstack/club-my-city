@@ -6,14 +6,11 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -99,7 +96,7 @@ public class Category_List extends Activity {
 
 
 
-		if (isNetworkAvailable()) {
+		if (Connectivity.isNetworkAvailable(activity)) {
 			// do something
 			// Set the layout
 			setContentView(R.layout.category_list);
@@ -108,18 +105,11 @@ public class Category_List extends Activity {
 
 			getNotNetworkView();
 		}
-//		getCategory();
 		// ATTENTION: This was auto-generated to implement the App Indexing API.
 		// See https://g.co/AppIndexing/AndroidStudio for more information.
 		client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 	}
 
-	private boolean isNetworkAvailable() {
-		ConnectivityManager connectivityManager
-				= (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-		return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-	}
 
 	@Override
 	public void onStart() {
@@ -172,7 +162,7 @@ public class Category_List extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				if (isNetworkAvailable()) {
+				if (Connectivity.isNetworkAvailable(activity)) {
 					setContentView(R.layout.category_list);
 					getCategory();
 				} else {

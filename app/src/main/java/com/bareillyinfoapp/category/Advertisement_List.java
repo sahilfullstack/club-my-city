@@ -14,10 +14,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-
+import android.widget.Toast;
 
 
 public class Advertisement_List extends Activity
@@ -80,12 +82,46 @@ public class Advertisement_List extends Activity
 	    public void onCreate(Bundle savedInstanceState) 
 	    {
 	        super.onCreate(savedInstanceState);
-	        setContentView(R.layout.advertise_list);  
+
 	        category_Id = getIntent().getExtras().getInt("category_id");
 	        activity = this;
-	        getAdvertisement();			
-		}    	
-	    
+
+			if (Connectivity.isNetworkAvailable(activity)) {
+				// do something
+				// Set the layout
+				setContentView(R.layout.advertise_list);
+				getAdvertisement();
+
+			} else {
+
+				getNotNetworkView();
+			}
+
+
+		}
+
+		public void getNotNetworkView() {
+			// Set the layout
+			setContentView(R.layout.no_network_page);
+
+			RelativeLayout noNetworkView = (RelativeLayout) findViewById(R.id.rlNoNework);
+			Button retryNetworkButton = (Button) noNetworkView.findViewById(R.id.retryNetConnectionButton);
+			retryNetworkButton.setOnClickListener(new View.OnClickListener() {
+
+				@Override
+				public void onClick(View v) {
+
+					if (Connectivity.isNetworkAvailable(activity)) {
+						setContentView(R.layout.category_list);
+						getAdvertisement();
+					} else {
+						Toast.makeText(activity, "No Internet Connection",
+								Toast.LENGTH_LONG).show();
+					}
+				}
+			});
+		}
+
 	    class processGetAdvertise extends AsyncTask<Integer, Integer, ArrayList<Advertisement>> {
 	    	ProgressDialog nDialog;
 	        protected void onPreExecute() 
