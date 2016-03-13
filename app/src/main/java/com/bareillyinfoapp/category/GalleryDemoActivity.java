@@ -1,12 +1,9 @@
 package com.bareillyinfoapp.category;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.MotionEventCompat;
 import android.util.Log;
@@ -18,28 +15,27 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
+import android.widget.TextView;
 
 public class GalleryDemoActivity extends Activity {
-
-    private ImageView selectedImageView;
-
-    private ImageView leftArrowImageView;
-
-    private ImageView rightArrowImageView;
-
+    private Activity activity;
+    private ImageView selectedImageView, leftArrowImageView, rightArrowImageView;
     private Gallery gallery;
-
     private int selectedImagePosition = 0;
-
-    private List<Drawable> drawables;
-
     private GalleryImageAdapter galImageAdapter;
     float startXValue = 1;
+    String advertisement_id;
+    ArrayList<String> galleryImages;
+    public ImageLoader imageLoader;
+    private TextView noImageTextView;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        advertisement_id = getIntent().getExtras().getString("advertisement_id");
         setContentView(R.layout.main);
-
+        activity = this;
+        imageLoader = new ImageLoader(activity);
         getDrawablesList();
         setupUI();
     }
@@ -47,12 +43,18 @@ public class GalleryDemoActivity extends Activity {
     private void setupUI() {
 
         selectedImageView = (ImageView) findViewById(R.id.selected_imageview);
+        noImageTextView = (TextView) findViewById(R.id.noImage_textview);
+
+
         leftArrowImageView = (ImageView) findViewById(R.id.left_arrow_imageview);
         rightArrowImageView = (ImageView) findViewById(R.id.right_arrow_imageview);
         gallery = (Gallery) findViewById(R.id.gallery);
 
+
+
         selectedImageView.setOnTouchListener(new View.OnTouchListener() {
             float nPicturePositionM = 0;
+
             public boolean onTouch(final View view, final MotionEvent event) {
 
                 float endXValue = 0;
@@ -75,22 +77,19 @@ public class GalleryDemoActivity extends Activity {
                                 }
 
                                 gallery.setSelection(selectedImagePosition, false);
-
                             }
-                        }else {
-                            if (startXValue -endXValue> 100) {
+                        } else {
+                            if (startXValue - endXValue > 100) {
                                 System.out.println("Right-Left");
 
-                                if (selectedImagePosition < drawables.size() - 1) {
+                                if (selectedImagePosition < galleryImages.size() - 1) {
                                     ++selectedImagePosition;
-
                                 }
 
                                 gallery.setSelection(selectedImagePosition, false);
                             }
                         }
                         return true;
-
 
                     default:
                         return true;
@@ -99,25 +98,22 @@ public class GalleryDemoActivity extends Activity {
         });
 
         leftArrowImageView.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                if (selectedImagePosition > 0) {
-                    --selectedImagePosition;
-
-                }
-
-                gallery.setSelection(selectedImagePosition, false);
-            }
-        });
+                                                  @Override
+                                                  public void onClick(View v) {
+                                                      if (selectedImagePosition > 0) {
+                                                          --selectedImagePosition;
+                                                      }
+                                                      gallery.setSelection(selectedImagePosition, false);
+                                                  }
+                                              }
+        );
 
         rightArrowImageView.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                if (selectedImagePosition < drawables.size() - 1) {
+                if (selectedImagePosition < galleryImages.size() - 1) {
                     ++selectedImagePosition;
 
                 }
@@ -134,7 +130,7 @@ public class GalleryDemoActivity extends Activity {
 
                 selectedImagePosition = pos;
 
-                if (selectedImagePosition > 0 && selectedImagePosition < drawables.size() - 1) {
+                if (selectedImagePosition > 0 && selectedImagePosition < galleryImages.size() - 1) {
 
                     leftArrowImageView.setImageDrawable(getResources().getDrawable(R.drawable.arrow_left_enabled));
                     rightArrowImageView.setImageDrawable(getResources().getDrawable(R.drawable.arrow_right_enabled));
@@ -143,7 +139,7 @@ public class GalleryDemoActivity extends Activity {
 
                     leftArrowImageView.setImageDrawable(getResources().getDrawable(R.drawable.arrow_left_disabled));
 
-                } else if (selectedImagePosition == drawables.size() - 1) {
+                } else if (selectedImagePosition == galleryImages.size() - 1) {
 
                     rightArrowImageView.setImageDrawable(getResources().getDrawable(R.drawable.arrow_right_disabled));
                 }
@@ -159,17 +155,15 @@ public class GalleryDemoActivity extends Activity {
 
         });
 
-        galImageAdapter = new GalleryImageAdapter(this, drawables);
 
-        gallery.setAdapter(galImageAdapter);
 
-        if (drawables.size() > 0) {
+        if (galleryImages.size() > 0) {
 
             gallery.setSelection(selectedImagePosition, false);
 
         }
 
-        if (drawables.size() == 1) {
+        if (galleryImages.size() == 1) {
 
             rightArrowImageView.setImageDrawable(getResources().getDrawable(R.drawable.arrow_right_disabled));
         }
@@ -195,30 +189,75 @@ public class GalleryDemoActivity extends Activity {
 
     private void getDrawablesList() {
 
-        drawables = new ArrayList<Drawable>();
-        drawables.add(getResources().getDrawable(R.drawable.natureimage1));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage2));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage3));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage4));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage5));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage6));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage7));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage8));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage9));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage10));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage11));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage12));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage13));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage14));
-        drawables.add(getResources().getDrawable(R.drawable.natureimage15));
+        galleryImages = new ArrayList<String>();
+
+        getGalleryImages();
+    }
+
+
+    class ProcessGetImages extends AsyncTask<Integer, Integer, ArrayList<String>> {
+        ProgressDialog nDialog;
+
+        @Override
+        protected void onPreExecute()
+        {
+            nDialog = new ProgressDialog(GalleryDemoActivity.this);
+            nDialog.setMessage("Receiving data...");
+            nDialog.setIndeterminate(false);
+            nDialog.setCancelable(true);
+            nDialog.show();
+        }
+
+        @Override
+        protected ArrayList<String> doInBackground(Integer... arg0)
+        {
+            DataSource dS = new DataSource();
+            Log.i("here", "doInBackground: adver id"+ advertisement_id);
+            ArrayList<String> ObjectItemData = dS.getAllGalleryImages(Integer.parseInt(advertisement_id));
+
+            return ObjectItemData;
+        }
+
+        @Override
+        protected void onPostExecute(ArrayList<String> result)
+        {
+            if(result.size() > 0) {
+                for(int i = 0; i< result.size(); i++) {
+                    galleryImages.add(result.get(i));
+                }
+                galImageAdapter = new GalleryImageAdapter(activity, galleryImages);
+                leftArrowImageView.setVisibility(View.VISIBLE);
+                rightArrowImageView.setVisibility(View.VISIBLE);
+                gallery.setAdapter(galImageAdapter);
+            } else {
+                leftArrowImageView.setVisibility(View.INVISIBLE);
+                rightArrowImageView.setVisibility(View.INVISIBLE);
+                noImageTextView.setVisibility(View.VISIBLE);
+            }
+
+            nDialog.dismiss();
+        }
 
     }
 
-    private void setSelectedImage(int selectedImagePosition) {
+    public void getGalleryImages()
+    {
+        try
+        {
+            new ProcessGetImages().execute();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 
-        BitmapDrawable bd = (BitmapDrawable) drawables.get(selectedImagePosition);
-        Bitmap b = Bitmap.createScaledBitmap(bd.getBitmap(), (int) (bd.getIntrinsicHeight() * 0.9), (int) (bd.getIntrinsicWidth() * 0.7), false);
-        selectedImageView.setImageBitmap(b);
+    private void setSelectedImage(int selectedImagePosition) {
+//
+//        BitmapDrawable bd = (BitmapDrawable) galleryImages.get(selectedImagePosition);
+//        Bitmap b = Bitmap.createScaledBitmap(bd.getBitmap(), (int) (bd.getIntrinsicHeight() * 0.9), (int) (bd.getIntrinsicWidth() * 0.7), false);
+//        selectedImageView.setImageBitmap(b);
+        imageLoader.DisplayImage("http://www.smartcityinfo.in/adminbly/images/adds/" + galleryImages.get(selectedImagePosition), selectedImageView);
         selectedImageView.setScaleType(ScaleType.FIT_XY);
 
     }

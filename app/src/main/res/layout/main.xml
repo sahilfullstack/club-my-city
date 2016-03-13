@@ -13,6 +13,17 @@
         android:layout_marginLeft="30dip"
         android:layout_marginRight="30dip"
         android:layout_marginTop="30dip" />
+    <TextView
+        android:id="@+id/noImage_textview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/gallery_relative_layout"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+        android:layout_marginTop="30dip"
+        android:text="No image to display"
+        android:gravity="center"
+       />
 
     <RelativeLayout
         android:id="@+id/gallery_relative_layout"
@@ -27,7 +38,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dip"
-            android:src="@drawable/arrow_left_disabled" />
+            android:src="@drawable/arrow_left_disabled"
+            android:visibility="invisible"/>
 
         <Gallery
             android:id="@+id/gallery"
@@ -46,7 +58,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dip"
-            android:src="@drawable/arrow_right_enabled" />
+            android:src="@drawable/arrow_right_enabled"
+            android:visibility="invisible"/>
     </RelativeLayout>
 
 </RelativeLayout>

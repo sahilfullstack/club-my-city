@@ -60,7 +60,9 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 
 	    public View getView(int position, View convertView, ViewGroup parent) 
 	    {
-	        View vi=convertView;	       
+			final String advertisementId;
+
+			View vi=convertView;
 	        notifyDataSetChanged();	        
 	        if(convertView==null)
 	        
@@ -73,26 +75,32 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 	        TextView address = (TextView)vi.findViewById(R.id.address);
 	        ImageView thumb_image=(ImageView)vi.findViewById(R.id.imageView1);
 
-			thumb_image.setOnClickListener(new View.OnClickListener() {
 
-				public void onClick(View view) {
-					Intent myIntent = new Intent(activity, GalleryDemoActivity.class);
-//					myIntent.putExtra("key", value); //Optional parameters
-					activity.startActivity(myIntent);
-				}
-			});
 
 			ImageButton offerButton = (ImageButton)vi.findViewById(R.id.imageButton1);
 
 			Advertisement p = data.get(position);
 
-			offerButton.setTag(p.mAdvertisementId);
+			advertisementId = p.mAdvertisementId;
+
+			offerButton.setTag(advertisementId);
 			offerButton.setOnClickListener(new View.OnClickListener() {
 
 				public void onClick(View view) {
 					getOffer((String) view.getTag());
 				}
 
+			});
+
+			//open gallery on click of thumb image
+			thumb_image.setOnClickListener(new View.OnClickListener() {
+
+				public void onClick(View view) {
+					Intent myIntent = new Intent(activity, GalleryDemoActivity.class);
+					Log.i("my id", "onClick: adver id"+ advertisementId);
+					myIntent.putExtra("advertisement_id", advertisementId); //Optional parameters
+					activity.startActivity(myIntent);
+				}
 			});
 
 			if(p.mOfferExist.equals("0")) {
@@ -121,18 +129,18 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 	        description.setText(p.mDescription);
 	         mobile_no.setText(p.mMobileNo);
 	         mobile_no.setOnClickListener(new View.OnClickListener() {
-		            public void onClick(View v) {
-		            	TextView temp = (TextView)v;
-		            	Intent intent = new Intent(Intent.ACTION_DIAL);
-		            	intent.setData(Uri.parse("tel:" + temp.getText()));
-		            	v.getContext().startActivity(intent);
-		            }
-		        });
+				 public void onClick(View v) {
+					 TextView temp = (TextView) v;
+					 Intent intent = new Intent(Intent.ACTION_DIAL);
+					 intent.setData(Uri.parse("tel:" + temp.getText()));
+					 v.getContext().startActivity(intent);
+				 }
+			 });
 	         email.setText(p.mEmail);
 	        address.setText(p.mAddress);    
 	       
 	        //imageLoader.DisplayImage("http://192.168.1.2/www.yellowsheet.com/images/" + p.mphoto, thumb_image);
-	        imageLoader.DisplayImage("http://www.smartcityinfo.in/adminbly/images/" + p.mphoto, thumb_image);
+			imageLoader.DisplayImage("http://www.smartcityinfo.in/adminbly/images/" + p.mphoto, thumb_image);
 	        return vi;
 	    }
 

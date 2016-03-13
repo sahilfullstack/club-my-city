@@ -1,5 +1,6 @@
 package com.bareillyinfoapp.category;
 
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class DataSource
 		private static String url_get_all_advertisement = "/index.php?/json/get_all_advertisement/";
 	//	private static String url_add_user = "/index.php?/Json/adduser/";
 		private static String url_get_all_offer_by_advertisement_id = "/index.php?/json/get_all_offer_by_advertisement_id/";
+		private static String url_get_advertisement_images = "/index.php?/json/get_advertisement_images/";
 
 		//for category
 		private static final String TAG_CATEGORY = "category";
@@ -46,6 +48,12 @@ public class DataSource
 			private static final String TAG_OFFER_1 = "offer_1";
 			private static final String TAG_OFFER_2 = "offer_2";
 			private static final String TAG_OFFER_3 = "offer_3";
+
+
+	//for gallery
+
+	private static final String TAG_IMAGES = "images";
+
 			JSONArray contacts = null;
 
 		/** Returns the singleton instance of this class. */
@@ -171,7 +179,31 @@ public class DataSource
 	     	return returnArray;
 		}
 
+	public ArrayList<String> getAllGalleryImages(Integer advertisementId)
+	{
+		ArrayList<String> returnArray = new ArrayList<String>();
+		JSONParser jParser = new JSONParser();
+		try
+		{
+			JSONObject json = jParser.getJSONFromUrl(url_get_advertisement_images + advertisementId);
 
+			if(json != null) {
+				contacts = json.getJSONArray(TAG_IMAGES);
+
+				for (int i = 0; i < contacts.length(); i++)
+				{
+					returnArray.add((String) contacts.get(i));
+				}
+			}
+		}
+		catch (JSONException e)
+		{
+			e.printStackTrace();
+		}
+
+
+		return returnArray;
+	}
 
 	public Offer getoffer(String advertisement_id)
 	{

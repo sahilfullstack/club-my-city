@@ -1,9 +1,16 @@
 package com.bareillyinfoapp.category;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -16,14 +23,15 @@ public class GalleryImageAdapter extends BaseAdapter {
 
     private static ImageView imageView;
 
-    private List<Drawable> plotsImages;
+    private ArrayList<String> plotsImages;
 
     private static ViewHolder holder;
-
-    public GalleryImageAdapter(Activity context, List<Drawable> plotsImages) {
+    public ImageLoader imageLoader;
+    public GalleryImageAdapter(Activity context, ArrayList<String> plotsImages) {
 
         this.context = context;
         this.plotsImages = plotsImages;
+        imageLoader = new ImageLoader(context.getApplicationContext());
 
     }
 
@@ -64,8 +72,7 @@ public class GalleryImageAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.imageView.setImageDrawable(plotsImages.get(position));
-
+        imageLoader.DisplayImage("http://www.smartcityinfo.in/adminbly/images/adds/" + plotsImages.get(position), holder.imageView);
         holder.imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         holder.imageView.setLayoutParams(new Gallery.LayoutParams(150, 90));
 

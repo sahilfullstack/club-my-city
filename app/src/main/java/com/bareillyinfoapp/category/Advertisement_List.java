@@ -96,8 +96,6 @@ public class Advertisement_List extends Activity
 
 				getNotNetworkView();
 			}
-
-
 		}
 
 		public void getNotNetworkView() {
