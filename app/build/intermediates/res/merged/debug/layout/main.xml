@@ -23,6 +23,7 @@
         android:layout_marginTop="30dip"
         android:text="No image to display"
         android:gravity="center"
+        android:visibility="invisible"
        />
 
     <RelativeLayout

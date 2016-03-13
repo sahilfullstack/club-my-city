@@ -10,52 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcf1da0b-5085-4e23-8e61-72939c3fe523" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/Advertisement_List$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/Advertisement_List$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/Advertisement_List$processGetAdvertise.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/Advertisement_List$processGetAdvertise.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/Advertisement_List.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/Advertisement_List.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/Category_List.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/Category_List.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/DataSource.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/DataSource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryDemoActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryDemoActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryDemoActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryDemoActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryDemoActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryDemoActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryDemoActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryDemoActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryDemoActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryDemoActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryImageAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryImageAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryImageAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/GalleryImageAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/JSONParser.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/JSONParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/LazyAdapterAdvertisement$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/LazyAdapterAdvertisement$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/LazyAdapterAdvertisement$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/LazyAdapterAdvertisement$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/LazyAdapterAdvertisement$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/LazyAdapterAdvertisement$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/LazyAdapterAdvertisement$processGetAdvertise.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/LazyAdapterAdvertisement$processGetAdvertise.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/LazyAdapterAdvertisement.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/LazyAdapterAdvertisement.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/bareillyinfoapp/category/R$styleable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_2eb637a19c1bb79aaf1c05ac976db13c97744f23.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_2eb637a19c1bb79aaf1c05ac976db13c97744f23.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/Advertisement_List.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/Advertisement_List.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/DataSource.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/DataSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/GalleryDemoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/GalleryDemoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/GalleryImageAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/GalleryImageAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/JSONParser.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/JSONParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/LazyAdapterAdvertisement.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/LazyAdapterAdvertisement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/bareillyinfoapp/category/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/bareillyinfoapp/category/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BareillyInfo.iws" />
@@ -2018,7 +1981,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8470209" sideWeight="0.1250996" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2689211" sideWeight="0.8749004" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2689211" sideWeight="0.8749004" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5136876" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -2027,7 +1990,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34023905" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34023905" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2238,20 +2201,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/bareillyinfoapp/category/GalleryDemoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="229" column="62" selection-start-line="229" selection-start-column="62" selection-end-line="229" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.6060606">
+          <caret line="50" column="49" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4321#4640#0" expanded="true" />
-            <element signature="e#4639#4640#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8636364">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.67140317">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
