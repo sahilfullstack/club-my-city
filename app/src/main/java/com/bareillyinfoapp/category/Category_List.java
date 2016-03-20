@@ -2,6 +2,8 @@ package com.bareillyinfoapp.category;
 
 
 import java.util.ArrayList;
+import java.util.Locale;
+
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -13,12 +15,16 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -30,7 +36,10 @@ import android.widget.Toast;
 public class Category_List extends Activity {
 	private Activity activity;
 	ListView listViewItems;
-	ArrayList<Category> categoryList;
+	public static ArrayList<Category> categoryList;
+	EditText inputSearch;
+	LazyAdapter adapter;
+	private ArrayList<Category> cloneList = null;
 	/**
 	 * ATTENTION: This was auto-generated to implement the App Indexing API.
 	 * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -189,10 +198,37 @@ public class Category_List extends Activity {
 
 			try {
 				categoryList = (ArrayList<Category>) result;
-				LazyAdapter adapter = new LazyAdapter(activity, categoryList);
+				cloneList = new ArrayList<Category> ();
+
+				adapter = new LazyAdapter(activity, categoryList);
 				listViewItems = (ListView) findViewById(R.id.listView1);
 				listViewItems.setAdapter(adapter);
+				inputSearch = (EditText) findViewById(R.id.inputSearch);
 
+				/**
+				 * Enabling Search Filter
+				 * */
+				inputSearch.addTextChangedListener(new TextWatcher() {
+
+					@Override
+					public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
+						// When user changed the Text
+						Log.i("blah blah", "onTextChanged: text:"+cs);
+						makeFilter(cs);
+					}
+
+					@Override
+					public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+												  int arg3) {
+						// TODO Auto-generated method stub
+
+					}
+
+					@Override
+					public void afterTextChanged(Editable arg0) {
+						// TODO Auto-generated method stub
+					}
+				});
 				listViewItems.setOnItemClickListener(new OnItemClickListener() {
 					@Override
 					public void onItemClick(AdapterView<?> parent, View view,
@@ -226,7 +262,58 @@ public class Category_List extends Activity {
 			ArrayList<Category> ObjectItemData = dS.getAllCategory();
 			return ObjectItemData;
 		}
+		// Filter Class
+		public void makeFilter(CharSequence charText) {
+
+			if (charText.length() == 0) {
+				adapter = new LazyAdapter(activity, categoryList);
+				listViewItems.setAdapter(adapter);
+			}
+			else
+			{
+				charText = charText.toString().toLowerCase();
+				cloneList.clear();
+				for(int i = 0; i < categoryList.size(); i++)
+				{
+					Log.i("hello", "checking category"+categoryList.get(i).mCategoryName);
+					Log.i("hello", "checking text"+charText);
+					Log.i("hello", "checking"+categoryList.get(i).mCategoryName.contains(charText));
+					if (categoryList.get(i).mCategoryName.trim().toLowerCase().contains(charText))
+					{
+						cloneList.add(categoryList.get(i));
+					}
+				}
+				adapter = new LazyAdapter(activity, cloneList);
+				listViewItems.setAdapter(adapter);
+			}
+		}
+
 	}
+
+//	// Filter Class
+//	public void filter(CharSequence charText) {
+////		charText = charText.toLowerCase(Locale.getDefault());
+//
+////		data.clear();
+//		if (charText.length() == 0) {
+//			adapter = new LazyAdapter(activity, categoryList);
+//			listViewItems.setAdapter(adapter);
+//		}
+//		else
+//		{
+//
+//			cloneList.add(categoryList.get(0));
+////			for(int i = 0; i < categoryList.size(); i++)
+////			{
+//////				if (categoryList.get(i).mCategoryName.contains(charText))
+//////				{
+////					cloneList.add(categoryList.get(i));
+//////				}
+////			}
+//			adapter = new LazyAdapter(activity, cloneList);
+//			listViewItems.setAdapter(adapter);
+//		}
+//	}
 
 	public void getCategory() {
 		try {

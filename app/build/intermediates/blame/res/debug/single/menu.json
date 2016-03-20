@@ -18,5 +18,9 @@
     {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/menu/category_menu.xml",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/menu/category_menu.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/menu/options_menu.xml",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/menu/options_menu.xml"
     }
 ]

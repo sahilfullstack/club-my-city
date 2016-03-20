@@ -1,41 +1,51 @@
 package com.bareillyinfoapp.category;
 import java.util.ArrayList;
+import java.util.Locale;
 
 import com.bareillyinfoapp.category.R;
 
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-public class LazyAdapter extends BaseAdapter 
+
+import com.bareillyinfoapp.category.Category_List;
+
+public class LazyAdapter extends BaseAdapter
 {
 	 private Activity activity;
 	    private ArrayList<Category> data = null;
 	    private static LayoutInflater inflater=null;
-	    public ImageLoader imageLoader; 
-	 
-	    public LazyAdapter(Activity a, ArrayList<Category> d) 
+	    public ImageLoader imageLoader;
+		private ArrayList<Category> arrayList = null;
+		private ArrayList<Category> cloneList = null;
+
+	    public LazyAdapter(Activity a, ArrayList<Category> d)
 	    {
-	        activity = a;	        
+			arrayList = (ArrayList<Category>) d;
+	        activity = a;
 	        if(data !=null)
 	        {
 		        data.clear();
-		    }	        
+		    }
+
 	         data=d;	        
 	        notifyDataSetChanged();        
 	        inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	        imageLoader=new ImageLoader(activity.getApplicationContext());	       
 	    }
-	    
-	    
-	    
-	   
-	    public int getCount() 
+
+
+
+
+	    public int getCount()
 	    {
 	        return data.size();
 	    }
@@ -88,4 +98,30 @@ public class LazyAdapter extends BaseAdapter
 	        imageLoader.DisplayImage("http://www.smartcityinfo.in/adminbly/images/" + p.mphoto, thumb_image);
 	        return vi;
 	    }
+
+	// Filter Class
+	public void filter(CharSequence charText) {
+//		charText = charText.toLowerCase(Locale.getDefault());
+
+//		data.clear();
+
+		if (charText.length() == 0) {
+			data.addAll(arrayList);
+		}
+		else
+		{
+			for (int i = 0; i < data.size(); i++)
+			{
+
+				if (data.get(i).mCategoryName.toLowerCase(Locale.getDefault()).contains(charText))
+				{
+					cloneList.add(data.get(i));
+				}
+			}
+
+
+		}
+
+		notifyDataSetChanged();
+	}
 }

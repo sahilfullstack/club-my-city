@@ -48,6 +48,10 @@
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage14.jpg"
     },
     {
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/action_search.png",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/action_search.png"
+    },
+    {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/ic_launcher.png"
     },
