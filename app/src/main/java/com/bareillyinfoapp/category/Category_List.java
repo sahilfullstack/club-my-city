@@ -8,6 +8,8 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.app.Activity;
@@ -28,6 +30,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+import android.widget.SearchView;
 import android.widget.TextView;
 import android.graphics.Color;
 import android.widget.Button;
@@ -51,6 +54,33 @@ public class Category_List extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater menuInflater = getMenuInflater();
 		menuInflater.inflate(R.menu.category_menu, menu);
+
+		// Associate searchable configuration with the SearchView
+		SearchManager searchManager =
+				(SearchManager) getSystemService(Context.SEARCH_SERVICE);
+		SearchView searchView =
+				(SearchView) menu.findItem(R.id.action_search1).getActionView();
+		searchView.setSearchableInfo(
+				searchManager.getSearchableInfo(getComponentName()));
+		//***setOnQueryTextListener***
+		searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+			@Override
+			public boolean onQueryTextSubmit(String query) {
+				// TODO Auto-generated method stub
+				Log.i("heehe", "onQueryTextSubmit: "+query);
+				return false;
+			}
+
+			@Override
+			public boolean onQueryTextChange(String newText) {
+				// TODO Auto-generated method stub
+
+				makeFilter2(newText);
+				return false;
+			}
+		});
+
 		return true;
 	}
 
@@ -203,32 +233,32 @@ public class Category_List extends Activity {
 				adapter = new LazyAdapter(activity, categoryList);
 				listViewItems = (ListView) findViewById(R.id.listView1);
 				listViewItems.setAdapter(adapter);
-				inputSearch = (EditText) findViewById(R.id.inputSearch1);
+//				inputSearch = (EditText) findViewById(R.id.inputSearch1);
 
 				/**
 				 * Enabling Search Filter
 				 * */
-				inputSearch.addTextChangedListener(new TextWatcher() {
-
-					@Override
-					public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
-						// When user changed the Text
-						Log.i("blah blah", "onTextChanged: text:"+cs);
-						makeFilter(cs);
-					}
-
-					@Override
-					public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
-												  int arg3) {
-						// TODO Auto-generated method stub
-
-					}
-
-					@Override
-					public void afterTextChanged(Editable arg0) {
-						// TODO Auto-generated method stub
-					}
-				});
+//				inputSearch.addTextChangedListener(new TextWatcher() {
+//
+//					@Override
+//					public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
+//						// When user changed the Text
+//						Log.i("blah blah", "onTextChanged: text:"+cs);
+////						makeFilter(cs);
+//					}
+//
+//					@Override
+//					public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+//												  int arg3) {
+//						// TODO Auto-generated method stub
+//
+//					}
+//
+//					@Override
+//					public void afterTextChanged(Editable arg0) {
+//						// TODO Auto-generated method stub
+//					}
+//				});
 				listViewItems.setOnItemClickListener(new OnItemClickListener() {
 					@Override
 					public void onItemClick(AdapterView<?> parent, View view,
@@ -263,29 +293,53 @@ public class Category_List extends Activity {
 			return ObjectItemData;
 		}
 		// Filter Class
-		public void makeFilter(CharSequence charText) {
-
-			if (charText.length() == 0) {
-				adapter = new LazyAdapter(activity, categoryList);
-				listViewItems.setAdapter(adapter);
-			}
-			else
-			{
-				charText = charText.toString().toLowerCase();
-				cloneList.clear();
-				for(int i = 0; i < categoryList.size(); i++)
-				{
-					if (categoryList.get(i).mCategoryName.trim().toLowerCase().contains(charText))
-					{
-						cloneList.add(categoryList.get(i));
-					}
-				}
-				adapter = new LazyAdapter(activity, cloneList);
-				listViewItems.setAdapter(adapter);
-			}
-		}
+//		public void makeFilter(CharSequence charText) {
+//
+//			if (charText.length() == 0) {
+//				adapter = new LazyAdapter(activity, categoryList);
+//				listViewItems.setAdapter(adapter);
+//			}
+//			else
+//			{
+//				charText = charText.toString().toLowerCase();
+//				cloneList.clear();
+//				for(int i = 0; i < categoryList.size(); i++)
+//				{
+//					if (categoryList.get(i).mCategoryName.trim().toLowerCase().contains(charText))
+//					{
+//						cloneList.add(categoryList.get(i));
+//					}
+//				}
+//				adapter = new LazyAdapter(activity, cloneList);
+//				listViewItems.setAdapter(adapter);
+//			}
+//		}
 
 	}
+
+	// Filter Class
+	public void makeFilter2(CharSequence charText) {
+
+		if (charText.length() == 0) {
+			adapter = new LazyAdapter(activity, categoryList);
+			listViewItems.setAdapter(adapter);
+		}
+		else
+		{
+			charText = charText.toString().toLowerCase();
+			cloneList.clear();
+			for(int i = 0; i < categoryList.size(); i++)
+			{
+				if (categoryList.get(i).mCategoryName.trim().toLowerCase().contains(charText))
+				{
+					cloneList.add(categoryList.get(i));
+				}
+			}
+			adapter = new LazyAdapter(activity, cloneList);
+			listViewItems.setAdapter(adapter);
+		}
+	}
+
 
 	public void getCategory() {
 		try {
