@@ -203,7 +203,7 @@ public class Category_List extends Activity {
 				adapter = new LazyAdapter(activity, categoryList);
 				listViewItems = (ListView) findViewById(R.id.listView1);
 				listViewItems.setAdapter(adapter);
-				inputSearch = (EditText) findViewById(R.id.inputSearch);
+				inputSearch = (EditText) findViewById(R.id.inputSearch1);
 
 				/**
 				 * Enabling Search Filter
@@ -275,9 +275,6 @@ public class Category_List extends Activity {
 				cloneList.clear();
 				for(int i = 0; i < categoryList.size(); i++)
 				{
-					Log.i("hello", "checking category"+categoryList.get(i).mCategoryName);
-					Log.i("hello", "checking text"+charText);
-					Log.i("hello", "checking"+categoryList.get(i).mCategoryName.contains(charText));
 					if (categoryList.get(i).mCategoryName.trim().toLowerCase().contains(charText))
 					{
 						cloneList.add(categoryList.get(i));
@@ -289,31 +286,6 @@ public class Category_List extends Activity {
 		}
 
 	}
-
-//	// Filter Class
-//	public void filter(CharSequence charText) {
-////		charText = charText.toLowerCase(Locale.getDefault());
-//
-////		data.clear();
-//		if (charText.length() == 0) {
-//			adapter = new LazyAdapter(activity, categoryList);
-//			listViewItems.setAdapter(adapter);
-//		}
-//		else
-//		{
-//
-//			cloneList.add(categoryList.get(0));
-////			for(int i = 0; i < categoryList.size(); i++)
-////			{
-//////				if (categoryList.get(i).mCategoryName.contains(charText))
-//////				{
-////					cloneList.add(categoryList.get(i));
-//////				}
-////			}
-//			adapter = new LazyAdapter(activity, cloneList);
-//			listViewItems.setAdapter(adapter);
-//		}
-//	}
 
 	public void getCategory() {
 		try {

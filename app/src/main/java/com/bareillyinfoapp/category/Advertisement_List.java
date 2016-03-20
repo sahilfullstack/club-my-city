@@ -10,11 +10,15 @@ import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -27,6 +31,10 @@ public class Advertisement_List extends Activity
 		private Activity activity;
 		ListView listViewItems;
 		int category_Id =0;
+		LazyAdapterAdvertisement adapter;
+		ArrayList<Advertisement> userList = null;
+		ArrayList<Advertisement> cloneList = null;
+	EditText inputSearch;
 		// for menu
 
 		@Override
@@ -104,6 +112,9 @@ public class Advertisement_List extends Activity
 
 			RelativeLayout noNetworkView = (RelativeLayout) findViewById(R.id.rlNoNework);
 			Button retryNetworkButton = (Button) noNetworkView.findViewById(R.id.retryNetConnectionButton);
+
+
+
 			retryNetworkButton.setOnClickListener(new View.OnClickListener() {
 
 				@Override
@@ -133,12 +144,42 @@ public class Advertisement_List extends Activity
 	        
 	        protected void onPostExecute(ArrayList<Advertisement> result) 
 	        {		        	
-	        	ArrayList<Advertisement> userList = (ArrayList<Advertisement>) result;	
+	        	userList = (ArrayList<Advertisement>) result;
+				cloneList = new ArrayList<Advertisement> ();
+
 	        	if (userList.size() > 0)
 	        	{
-	        	LazyAdapterAdvertisement adapter = new LazyAdapterAdvertisement(activity, userList);		    		 
+	        	adapter = new LazyAdapterAdvertisement(activity, userList);
 	    		listViewItems = (android.widget.ListView) findViewById(R.id.listView1);		    		 
 	    		listViewItems.setAdapter(adapter);
+
+
+					inputSearch = (EditText) findViewById(R.id.inputSearch2);
+
+					/**
+					 * Enabling Search Filter
+					 * */
+					inputSearch.addTextChangedListener(new TextWatcher() {
+
+						@Override
+						public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
+							// When user changed the Text
+							Log.i("blah blah", "onTextChanged: text:" + cs);
+							makeFilter(cs);
+						}
+
+						@Override
+						public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+													  int arg3) {
+							// TODO Auto-generated method stub
+
+						}
+
+						@Override
+						public void afterTextChanged(Editable arg0) {
+							// TODO Auto-generated method stub
+						}
+					});
 	        	}
 	    		nDialog.dismiss();
 	        }
@@ -150,7 +191,26 @@ public class Advertisement_List extends Activity
 	    		DataSource dS = new DataSource();
 	    		ArrayList<Advertisement> ObjectItemData = dS.getAllAdvertisement(category_Id);		    		
 	    		return ObjectItemData;		    		
-	    	}		    	
+	    	}
+
+			// Filter Class
+			public void makeFilter(CharSequence charText) {
+
+				if (charText.length() == 0) {
+					adapter = new LazyAdapterAdvertisement(activity, userList);
+					listViewItems.setAdapter(adapter);
+				} else {
+					charText = charText.toString().toLowerCase();
+					cloneList.clear();
+					for (int i = 0; i < userList.size(); i++) {
+						if (userList.get(i).madvertiseName.trim().toLowerCase().contains(charText)) {
+							cloneList.add(userList.get(i));
+						}
+					}
+					adapter = new LazyAdapterAdvertisement(activity, cloneList);
+					listViewItems.setAdapter(adapter);
+				}
+			}
 		}
 
 		public void getAdvertisement()
