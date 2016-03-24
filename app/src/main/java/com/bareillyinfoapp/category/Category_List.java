@@ -323,6 +323,24 @@ public class Category_List extends Activity {
 		if (charText.length() == 0) {
 			adapter = new LazyAdapter(activity, categoryList);
 			listViewItems.setAdapter(adapter);
+
+			listViewItems.setOnItemClickListener(new OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view,
+										int position, long id) {
+
+					// ListView Clicked item index
+					int itemPosition = position;
+
+					// ListView Clicked item value
+					Category itemValue = (Category) categoryList.get(position);
+					Intent advertisementIntent = new Intent(getApplicationContext(), Advertisement_List.class);
+
+					advertisementIntent.putExtra("category_id", itemValue.mCategory_Id);
+
+					startActivity(advertisementIntent);
+				}
+			});
 		}
 		else
 		{
@@ -337,6 +355,24 @@ public class Category_List extends Activity {
 			}
 			adapter = new LazyAdapter(activity, cloneList);
 			listViewItems.setAdapter(adapter);
+
+			listViewItems.setOnItemClickListener(new OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> parent, View view,
+										int position, long id) {
+
+					// ListView Clicked item index
+					int itemPosition = position;
+
+					// ListView Clicked item value
+					Category itemValue = (Category) cloneList.get(position);
+					Intent advertisementIntent = new Intent(getApplicationContext(), Advertisement_List.class);
+
+					advertisementIntent.putExtra("category_id", itemValue.mCategory_Id);
+
+					startActivity(advertisementIntent);
+				}
+			});
 		}
 	}
 
