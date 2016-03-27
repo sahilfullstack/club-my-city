@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/category_name"
         android:layout_toRightOf="@+id/category_image"
+        android:textColor="#99a8ce"
         android:text="TextView" />
 
 </RelativeLayout>

@@ -37,7 +37,7 @@ public class Advertisement_List extends Activity
 		LazyAdapterAdvertisement adapter;
 		ArrayList<Advertisement> userList = null;
 		ArrayList<Advertisement> cloneList = null;
-	EditText inputSearch;
+		EditText inputSearch;
 		// for menu
 
 		@Override
@@ -251,7 +251,8 @@ public class Advertisement_List extends Activity
 					charText = charText.toString().toLowerCase();
 					cloneList.clear();
 					for (int i = 0; i < userList.size(); i++) {
-						if (userList.get(i).madvertiseName.trim().toLowerCase().contains(charText)) {
+						if (userList.get(i).madvertiseName.trim().toLowerCase().contains(charText)
+								|| userList.get(i).mAddress.trim().toLowerCase().contains(charText)) {
 							cloneList.add(userList.get(i));
 						}
 					}

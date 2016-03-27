@@ -97,6 +97,7 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 
 				public void onClick(View view) {
 					Intent myIntent = new Intent(activity, GalleryDemoActivity.class);
+
 					Log.i("my id", "onClick: adver id"+ advertisementId);
 					myIntent.putExtra("advertisement_id", advertisementId); //Optional parameters
 					activity.startActivity(myIntent);

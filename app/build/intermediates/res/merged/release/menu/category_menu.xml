@@ -7,10 +7,10 @@
      
     <item android:id="@+id/contact_us"
         android:title="Contact Us" />
-    
-    
-    
-    
-    
 
+    <item android:id="@+id/action_search1"
+        android:title="Search Searh"
+        android:icon="@drawable/action_search"
+        android:showAsAction="collapseActionView|ifRoom"
+        android:actionViewClass="android.widget.SearchView" />
 </menu>

@@ -1,6 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:2:1-40:12
+ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:2:1-51:12
+	xmlns:android
+		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:2:11-69
 	package
 		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:3:5-43
 		INJECTED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml
@@ -13,10 +15,12 @@ ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/And
 		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:4:5-28
 		INJECTED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml
 		INJECTED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml
-	xmlns:android
-		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:7:5-9:40
+MERGED from [com.android.support:support-v4:22.2.0] /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:22.2.0] /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:9:9-38
 		INJECTED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml
@@ -26,7 +30,11 @@ ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/And
 		INJECTED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml
 		INJECTED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml
 application
-ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:12:5-35:19
+ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:12:5-46:19
+MERGED from [com.android.support:support-v4:22.2.0] /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-appindexing:8.1.0] /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:22.2.0] /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:16:9-41
 	android:allowBackup
@@ -61,19 +69,34 @@ ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/And
 		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:32:13-45
 	android:name
 		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:30:13-75
+activity#com.bareillyinfoapp.category.GalleryDemoActivity
+ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:35:9-40:20
+	android:screenOrientation
+		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:37:13-49
+	android:label
+		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:38:13-45
+	android:name
+		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:36:13-76
+meta-data#com.google.android.gms.version
+ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:43:9-45:69
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:21:9-23:69
+	android:name
+		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:44:13-58
+	android:value
+		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:45:13-66
 uses-permission#android.permission.INTERNET
-ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:36:1-63
+ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:47:5-67
 	android:name
-		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:36:18-60
+		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:47:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:37:2-78
+ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:48:2-78
 	android:name
-		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:37:19-75
+		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:48:19-75
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:38:2-76
+ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:49:2-76
 	android:name
-		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:38:19-73
+		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:49:19-73
 uses-permission#android.permission.CALL_PHONE
-ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:39:5-68
+ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:50:5-68
 	android:name
-		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:39:22-66
+		ADDED from /var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/AndroidManifest.xml:50:22-66

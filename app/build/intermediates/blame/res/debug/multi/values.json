@@ -1130,7 +1130,7 @@
                     "startOffset": 6396,
                     "endLine": 72,
                     "endColumn": 62,
-                    "endOffset": 7220
+                    "endOffset": 7226
                 },
                 "from": {
                     "file": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/values/strings.xml",
@@ -1140,7 +1140,7 @@
                         "startOffset": 331,
                         "endLine": 18,
                         "endColumn": 62,
-                        "endOffset": 1155
+                        "endOffset": 1161
                     }
                 }
             },
@@ -1148,18 +1148,18 @@
                 "to": {
                     "startLine": 73,
                     "startColumn": 4,
-                    "startOffset": 7225,
-                    "endColumn": 245,
-                    "endOffset": 7466
+                    "startOffset": 7231,
+                    "endColumn": 265,
+                    "endOffset": 7492
                 },
                 "from": {
                     "file": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/values/strings.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1160,
-                        "endColumn": 245,
-                        "endOffset": 1401
+                        "startOffset": 1166,
+                        "endColumn": 265,
+                        "endOffset": 1427
                     }
                 }
             },
@@ -1167,9 +1167,9 @@
                 "to": {
                     "startLine": 74,
                     "startColumn": 4,
-                    "startOffset": 7471,
+                    "startOffset": 7497,
                     "endColumn": 39,
-                    "endOffset": 7506
+                    "endOffset": 7532
                 },
                 "from": {
                     "file": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/values/strings.xml",
@@ -1186,9 +1186,9 @@
                 "to": {
                     "startLine": 75,
                     "startColumn": 4,
-                    "startOffset": 7511,
+                    "startOffset": 7537,
                     "endColumn": 77,
-                    "endOffset": 7584
+                    "endOffset": 7610
                 },
                 "from": {
                     "file": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/values/strings.xml",
@@ -1205,10 +1205,10 @@
                 "to": {
                     "startLine": 76,
                     "startColumn": 4,
-                    "startOffset": 7589,
+                    "startOffset": 7615,
                     "endLine": 82,
                     "endColumn": 12,
-                    "endOffset": 7875
+                    "endOffset": 7901
                 },
                 "from": {
                     "file": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/values/styles.xml",
@@ -1226,10 +1226,10 @@
                 "to": {
                     "startLine": 83,
                     "startColumn": 4,
-                    "startOffset": 7880,
+                    "startOffset": 7906,
                     "endLine": 86,
                     "endColumn": 8,
-                    "endOffset": 8035
+                    "endOffset": 8061
                 },
                 "from": {
                     "file": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/values/styles.xml",

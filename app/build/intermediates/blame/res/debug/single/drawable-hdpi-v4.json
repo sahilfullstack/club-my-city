@@ -1,94 +1,34 @@
 [
     {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage15.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage15.jpg"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage12.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage12.jpg"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage2.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage2.jpg"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/arrow_left_disabled.png",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/arrow_left_disabled.png"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_ic_googleplayservices.png",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/drawable-hdpi/common_ic_googleplayservices.png"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage9.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage9.jpg"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage5.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage5.jpg"
-    },
-    {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/arrow_right_disabled.png",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/arrow_right_disabled.png"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_full_open_on_phone.png",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/drawable-hdpi/common_full_open_on_phone.png"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage11.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage11.jpg"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/arrow_left_enabled.png",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/arrow_left_enabled.png"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage14.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage14.jpg"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/action_search.png",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/action_search.png"
     },
     {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage7.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage7.jpg"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage4.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage4.jpg"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage1.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage1.jpg"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage3.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage3.jpg"
-    },
-    {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage6.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage6.jpg"
-    },
-    {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/arrow_right_enabled.png",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/arrow_right_enabled.png"
     },
     {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage8.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage8.jpg"
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_full_open_on_phone.png",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/drawable-hdpi/common_full_open_on_phone.png"
     },
     {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage10.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage10.jpg"
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/arrow_left_disabled.png",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/arrow_left_disabled.png"
     },
     {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/natureimage13.jpg",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/natureimage13.jpg"
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/arrow_left_enabled.png",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/arrow_left_enabled.png"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_ic_googleplayservices.png",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/drawable-hdpi/common_ic_googleplayservices.png"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/action_search.png",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-hdpi/action_search.png"
     }
 ]
