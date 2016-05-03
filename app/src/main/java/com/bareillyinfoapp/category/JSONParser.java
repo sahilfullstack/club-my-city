@@ -27,7 +27,7 @@ public class JSONParser
 	static JSONArray jArr = null;
 	static String json = "";
 	   //static String http = "http://192.168.1.2/www.yellowsheet.com";
-	    static String http = "http://www.smartcityinfo.in/adminbly";
+	    static String http = "http://dwarkainfo.nextalphabet.com";
 		
 	    public JSONParser() 
 	    { 	  

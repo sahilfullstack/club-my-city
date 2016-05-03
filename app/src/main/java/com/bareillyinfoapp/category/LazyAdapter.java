@@ -95,7 +95,7 @@ public class LazyAdapter extends BaseAdapter
 	     //   String bhk_options_str = p.mStakeholderId.replace("0,","").replace(", 0", "") + " BHK";
 	        category_name.setText(p.mCategoryName);	        
 	        discri.setText(p.mDisc);   
-	        imageLoader.DisplayImage("http://www.smartcityinfo.in/adminbly/images/" + p.mphoto, thumb_image);
+	        imageLoader.DisplayImage("http://dwarkainfo.nextalphabet.com/images/" + p.mphoto, thumb_image);
 	        return vi;
 	    }
 

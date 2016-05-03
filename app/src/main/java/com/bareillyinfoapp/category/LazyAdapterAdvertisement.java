@@ -141,7 +141,7 @@ public class LazyAdapterAdvertisement extends BaseAdapter
 	        address.setText(p.mAddress);    
 	       
 	        //imageLoader.DisplayImage("http://192.168.1.2/www.yellowsheet.com/images/" + p.mphoto, thumb_image);
-			imageLoader.DisplayImage("http://www.smartcityinfo.in/adminbly/images/" + p.mphoto, thumb_image);
+			imageLoader.DisplayImage("http://dwarkainfo.nextalphabet.com/images/" + p.mphoto, thumb_image);
 	        return vi;
 	    }
 

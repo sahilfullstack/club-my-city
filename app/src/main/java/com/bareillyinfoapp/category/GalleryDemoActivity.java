@@ -257,7 +257,7 @@ public class GalleryDemoActivity extends Activity {
 //        BitmapDrawable bd = (BitmapDrawable) galleryImages.get(selectedImagePosition);
 //        Bitmap b = Bitmap.createScaledBitmap(bd.getBitmap(), (int) (bd.getIntrinsicHeight() * 0.9), (int) (bd.getIntrinsicWidth() * 0.7), false);
 //        selectedImageView.setImageBitmap(b);
-        imageLoader.DisplayImage("http://www.smartcityinfo.in/adminbly/images/adds/" + galleryImages.get(selectedImagePosition), selectedImageView);
+        imageLoader.DisplayImage("http://dwarkainfo.nextalphabet.com/images/adds/" + galleryImages.get(selectedImagePosition), selectedImageView);
         selectedImageView.setScaleType(ScaleType.FIT_XY);
 
     }
