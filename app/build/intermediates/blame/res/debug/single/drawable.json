@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/offericon.png",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/offericon.png"
-    },
-    {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/i.png",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/i.png"
     },
@@ -12,20 +8,56 @@
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/phone.png"
     },
     {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/image_border.xml",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/image_border.xml"
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/debug/drawable/phone.png",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/phone.png"
     },
     {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/blyinfoicon.png",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/blyinfoicon.png"
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/offericon.png",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/offericon.png"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/image_border.xml",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/image_border.xml"
     },
     {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/selected_image_border.xml",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/selected_image_border.xml"
     },
     {
+        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/blyinfoicon.png",
+        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/blyinfoicon.png"
+    },
+    {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/list_selector.xml",
         "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable/list_selector.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/debug/drawable/blyinfoicon.png",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/blyinfoicon.png"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/debug/drawable/selected_image_border.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/selected_image_border.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/debug/drawable/offericon.png",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/offericon.png"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/debug/drawable/ic_launcher.png",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/ic_launcher.png"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/debug/drawable/i.png",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/i.png"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/debug/drawable/list_selector.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/list_selector.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/debug/drawable/image_border.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/image_border.xml"
     },
     {
         "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable/ic_launcher.png",
