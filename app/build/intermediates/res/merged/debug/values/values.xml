@@ -68,10 +68,10 @@
           So, we made an appliction for our Bareilly..\n
           In this application u will get all the detail information of Bareilly City..\n\n
                 
-            Powered By:Ashutosh Gangwar(Founder), Ishan Bharadwaj(Co-Founder) And Arpit Gupta(MD) \n\n
+            Powered By:Satish Sharma(Founder), Mukul Prataph Singh(Co-Founder) \n\n
              
-            Contact Us:smartcityinformation@gmail.com</string>
-    <string name="menu_contact_us">For advertisement contact us @.\n\nPowered By:Ashutosh Gangwar(Founder), Ishan Bharadwaj(Co-Founder) And Arpit Gupta(MD) \n\nSales : +919548858606; +918392857709; +918826200305\n\n Mail Id : smartcityinformation@gmail.com</string>
+            Contact Us:nextalphabet@gmail.com</string>
+    <string name="menu_contact_us">For advertisement contact us @.\n\nPowered By:Satish Sharma(Founder), Mukul Prataph Singh(Co-Founder) : +918860712765\n\n Mail Id : nextalphabet@gmail.com</string>
     <string name="show_menu">1</string>
     <string name="title_activity_add_advertisement">AddAdvertisement</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
