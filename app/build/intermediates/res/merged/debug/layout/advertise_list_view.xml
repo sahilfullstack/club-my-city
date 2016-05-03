@@ -89,6 +89,6 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/email"
         android:layout_below="@+id/email"
-        android:text="Please Don't Forget To Mention 'BareillyInfo'" />
+        android:text="Please Don't Forget To Mention 'DwarkaInfo'" />
 
 </RelativeLayout>

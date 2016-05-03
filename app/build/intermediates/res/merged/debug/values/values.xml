@@ -26,7 +26,7 @@
     <dimen name="activity_vertical_margin">8dp</dimen>
     <integer name="google_play_services_version">8115000</integer>
     <string name="action_settings">Settings</string>
-    <string name="app_name">Bareilly Info</string>
+    <string name="app_name">Dwarka Info</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
     <string name="common_android_wear_notification_needs_update_text"><ns1:g id="app_name">%1$s</ns1:g> requires an update to the Android Wear app.</string>
@@ -71,7 +71,7 @@
             Powered By:Satish Sharma(Founder), Mukul Prataph Singh(Co-Founder) \n\n
              
             Contact Us:nextalphabet@gmail.com</string>
-    <string name="menu_contact_us">For advertisement contact us @.\n\nPowered By:Satish Sharma(Founder), Mukul Prataph Singh(Co-Founder) : +918860712765\n\n Mail Id : nextalphabet@gmail.com</string>
+    <string name="menu_contact_us">For advertisement contact us @.\n\nPowered By:Satish Sharma(Founder), Mukul Prataph Singh(Co-Founder): +918860712765\n\n Mail Id : nextalphabet@gmail.com</string>
     <string name="show_menu">1</string>
     <string name="title_activity_add_advertisement">AddAdvertisement</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">

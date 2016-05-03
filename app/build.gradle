@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "com.bareillyinfoapp.category"
+        applicationId "com.dwarkainfoapp.category"
         minSdkVersion 14
         targetSdkVersion 19
     }
