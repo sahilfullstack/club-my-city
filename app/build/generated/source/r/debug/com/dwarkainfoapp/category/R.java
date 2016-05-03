@@ -73,16 +73,15 @@ containing a value of this type.
         public static final int arrow_left_enabled=0x7f020002;
         public static final int arrow_right_disabled=0x7f020003;
         public static final int arrow_right_enabled=0x7f020004;
-        public static final int blyinfoicon=0x7f020005;
-        public static final int common_full_open_on_phone=0x7f020006;
-        public static final int common_ic_googleplayservices=0x7f020007;
-        public static final int i=0x7f020008;
-        public static final int ic_launcher=0x7f020009;
-        public static final int image_border=0x7f02000a;
-        public static final int list_selector=0x7f02000b;
-        public static final int offericon=0x7f02000c;
-        public static final int phone=0x7f02000d;
-        public static final int selected_image_border=0x7f02000e;
+        public static final int common_full_open_on_phone=0x7f020005;
+        public static final int common_ic_googleplayservices=0x7f020006;
+        public static final int i=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int image_border=0x7f020009;
+        public static final int list_selector=0x7f02000a;
+        public static final int offericon=0x7f02000b;
+        public static final int phone=0x7f02000c;
+        public static final int selected_image_border=0x7f02000d;
     }
     public static final class id {
         public static final int about_us=0x7f0a001c;

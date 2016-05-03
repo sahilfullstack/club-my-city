@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
-        "source": "/var/www/owlgrin/horntell/android/mohit/BareillyInfo/app/src/main/res/drawable-ldpi/ic_launcher.png"
-    },
-    {
         "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/ic_launcher.png",
         "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable-ldpi/ic_launcher.png"
     }
