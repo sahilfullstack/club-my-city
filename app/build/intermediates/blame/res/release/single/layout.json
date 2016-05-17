@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/layout/advertise_list_view.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/layout/advertise_list_view.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/layout/list_view_row_item.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/layout/list_view_row_item.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/layout/activity_main.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/layout/advertise_list.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/layout/advertise_list.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/layout/category_list.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/layout/category_list.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/layout/main.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/layout/no_network_page.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/layout/no_network_page.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/layout/offer_form.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/layout/offer_form.xml"
+    }
+]

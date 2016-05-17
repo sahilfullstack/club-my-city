@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/drawable/ic_launcher.png",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/ic_launcher.png"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/drawable/phone.png",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/phone.png"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/drawable/list_selector.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/list_selector.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/drawable/selected_image_border.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/selected_image_border.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/drawable/image_border.xml",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/image_border.xml"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/drawable/i.png",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/i.png"
+    },
+    {
+        "merged": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/build/intermediates/res/merged/release/drawable/offericon.png",
+        "source": "/var/www/owlgrin/horntell/android/Next Alphabet/Dwarkainfo/app/src/main/res/drawable/offericon.png"
+    }
+]
